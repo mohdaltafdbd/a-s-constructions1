@@ -45,8 +45,29 @@ body{
 }
 
 
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 180px; /* same as fixed-img height */
+  overflow: hidden;
+}
 
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;       /* fix height */
+  object-fit: cover;   /* crop and fit */
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out; /* smooth fade */
+}
 
+.carousel img.active {
+  opacity: 1;
+  z-index: 1;
+}
 
 
 .site-header{
